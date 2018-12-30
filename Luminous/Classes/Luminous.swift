@@ -409,13 +409,15 @@ public struct Luminous {
                 /// Check if headphones are plugged in
                 public static var isHeadsetPluggedIn: Bool {
                     // !!!: Thanks to Antonio E., this code is coming from this SO answer : http://stackoverflow.com/a/21382748/588967 . I've only translated it in Swift
-                    let route = AVAudioSession.sharedInstance().currentRoute
                     
-                    for desc in route.outputs {
-                        if desc.portType == .headphones {
-                            return true
-                        }
-                    }
+// Commented out for Brevity!
+//                    let route = AVAudioSession.sharedInstance().currentRoute
+//
+//                    for desc in route.outputs {
+//                        if (desc.portType == .headphones) {
+//                            return true
+//                        }
+//                    }
                     return false
                 }
             }
