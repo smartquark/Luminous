@@ -11,10 +11,14 @@ import Luminous
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var device_current: UILabel!
+    @IBOutlet weak var device_id: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.device_current.text = "Current: \(Luminous.System.Hardware.Device.current)"
+        self.device_id.text = "Identifier: \(Luminous.System.Hardware.Device.identifierForVendor ?? "-")"
         
         // MARK: Network
         
